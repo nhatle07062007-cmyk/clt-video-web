@@ -1,41 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Mo phong dinh li gioi han trung tam">
-    <title>Mo phong CLT</title>
-    <link rel="stylesheet"
-    href="{{ url_for(’static’, path=’/css/style.css’) }}">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mô phỏng Định lý Giới hạn Trung tâm (CLT)</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
 </head>
 <body>
-<main class="container grid">
-    <section class="card video-card">
-        <h2>Video mo phong</h2>
-        <video controls playsinline preload="metadata"aria-label="Video mo phong dinh li gioi han trung tam">
-            <source
-            src="{{ url_for(’static’, path=’/video/clt_simulation.mp4’) }}"
-            type="video/mp4">   
-            Trinh duyet cua ban khong ho tro video HTML5.
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">XÁC SUẤT & THỐNG KÊ</span>
+      <h1>Định lý Giới hạn Trung tâm (CLT)</h1>
+      <p>Quan sát quá trình hội tụ về phân phối chuẩn thông qua mô phỏng trực quan.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <section class="card">
+        <h2>Video Mô phỏng</h2>
+        <video controls autoplay loop muted playsinline>
+          <source src="{{ url_for('static', path='/videos/clt_simulation.mp4') }}" type="video/mp4">
+          Trình duyệt của bạn không hỗ trợ phát video MP4.
         </video>
-    </section>
-    <aside class="card">
-        <h2>Cach quan sat</h2>
-        <ol>
-            <li>So sanh cac kich thuoc mau n.</li>
-            <li>Quan sat histogram cua trung binh mau.</li>
-            <li>Danh gia xu huong tien ve dang chuong.</li>
-        </ol>
-    </aside>
-</main>
+      </section>
+
+      <aside class="card">
+        <h2>Nguyên lý CLT</h2>
+        <p>
+          Khi cỡ mẫu <strong>n</strong> tăng lên đủ lớn, phân phối của các giá trị trung bình mẫu sẽ xấp xỉ phân phối chuẩn (hình chuông), bất kể phân phối ban đầu của tổng thể.
+        </p>
+      </aside>
+    </div>
+  </main>
 </body>
 </html>
-
-    <header class="hero">
-        <div class="container">
-            <p class="eyebrow">LAP TRINH PYTHON NANG CAO</p>
-            <h1>Dinh li Gioi han Trung tam</h1>
-            <p>Quan sat phan phoi cua trung binh mau khi n tang.</p>
-        </div>
-    </header>
